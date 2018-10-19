@@ -1,0 +1,113 @@
+$color1: #00b7ea;
+$color2: #8541ba;
+
+$form-padding: 5px;
+$item-padding: 5px;
+
+@mixin transition-ease($time) {
+  -webkit-transition: all ease $time;
+  -moz-transition: all ease $time;
+  -ms-transition: all ease $time;
+  -o-transition: all ease $time;
+  transition: all ease $time;
+}
+
+.WeatherApp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  &__header {
+    color: white;
+  }
+  &__content {
+    border: 1px solid #eee;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 300px;
+    @include transition-ease(.5s);
+  }
+  &__footer {
+    align-self: flex-end;
+    justify-self: flex-end;
+    font-size: .5rem;
+    color: rgba(255, 255, 255, 0.49);
+  }
+}
+
+.WeatherApp-form {
+  display: flex;
+  flex-wrap: wrap;
+  &__row {
+    flex: 1;
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    label {
+      margin: 5px;
+      flex: 1;
+    }
+    input {
+      flex: 2;
+      border: none;
+      border-bottom: 2px solid $color1;
+      padding: $form-padding;
+      &:focus {
+        outline: none;
+        border-bottom: 2px solid $color2;
+      }
+    }
+    button {
+      background: transparent;
+      border: 2px solid $color1;
+      border-radius: 5px;
+      padding: $form-padding $form-padding*2;
+      @include transition-ease(.5s);
+      &:hover{
+        cursor: pointer;
+        border: 2px solid $color2;
+      }
+    }
+
+  }
+}
+
+.WeatherData{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  &__col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+    &--details{
+      align-items: flex-start;
+    }
+  }
+  &__item{
+    padding: $item-padding;
+    &--error{
+      align-self: flex-start;
+      color: red;
+      margin: 5px 0px;
+    }
+    &--location{
+      font-weight: bold;
+      font-size: 1.7rem;
+    }
+    &--icon{
+    }
+    &--temperature{
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+}
