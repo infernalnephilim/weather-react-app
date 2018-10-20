@@ -5,7 +5,15 @@
   align-items: center;
   margin: 5px; }
   .WeatherApp__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white; }
+    .WeatherApp__header img {
+      max-height: 40px;
+      float: left;
+      margin: 1px 5px; }
   .WeatherApp__content {
     border: 1px solid #eee;
     background: white;
@@ -74,7 +82,9 @@
   .WeatherData__item {
     padding: 5px; }
     .WeatherData__item--error {
+      width: 100%;
       align-self: flex-start;
+      justify-self: flex-start;
       color: red;
       margin: 5px 0px; }
     .WeatherData__item--location {

@@ -6,6 +6,10 @@ class Weather extends Component {
     render() {
         return (
             <div className="WeatherData">
+                {this.props.error &&
+                <div className="WeatherData__item WeatherData__item--error">
+                    <i className="fas fa-exclamation-circle"></i> {this.props.error}
+                </div>}
                 <div className="WeatherData__col">
                     {this.props.weather.city && this.props.weather.country &&
                     <div className="WeatherData__item WeatherData__item--location">
@@ -42,11 +46,6 @@ class Weather extends Component {
                         Humidity: {this.props.weather.humidity} %
                     </div>}
                 </div>
-
-                {this.props.error &&
-                <div className="WeatherData__item WeatherData__item--error">
-                    <i className="fas fa-exclamation-circle"></i> {this.props.error}
-                </div>}
             </div>
         );
     }

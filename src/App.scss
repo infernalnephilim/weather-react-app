@@ -19,7 +19,16 @@ $item-padding: 5px;
   align-items: center;
   margin: 5px;
   &__header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
+    img{
+      max-height: 40px;
+      float: left;
+      margin: 1px 5px;
+    }
   }
   &__content {
     border: 1px solid #eee;
@@ -94,7 +103,9 @@ $item-padding: 5px;
   &__item{
     padding: $item-padding;
     &--error{
+      width: 100%;
       align-self: flex-start;
+      justify-self: flex-start;
       color: red;
       margin: 5px 0px;
     }

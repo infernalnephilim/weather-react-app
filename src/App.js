@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 
 const API_KEY = "2b1eed97055779f4e575ab64e44e8761";
 
