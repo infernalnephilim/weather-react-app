@@ -8,7 +8,7 @@ import Weather from "./components/Weather";
 import Footer from "./components/Footer";
 import Loader from "./components/Loader";
 
-const API_KEY = "2b1eed97055779f4e575ab64e44e8761";
+const API_KEY = "";
 
 class App extends React.Component {
     state = {
